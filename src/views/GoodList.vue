@@ -1,26 +1,22 @@
 <template>
   <div class="content">
-    <header-bar></header-bar>
+    <header-bar :title="title"></header-bar>
   </div>
 </template>
 
 <script>
-  import { XButton } from 'vux'
   import HeaderBar from '../components/HeaderBar.vue'
   export default {
-    components: {
-      XButton,
-      HeaderBar
-    },
     data () {
       return {
-        msg: 'Hello World!'
+        msg: 'Hello World!',
+        title: '盛行优选'
       }
     },
+    components: {
+      HeaderBar
+    },
     methods: {
-      back () {
-        this.$router.go(-1)
-      }
     }
   }
 </script>
