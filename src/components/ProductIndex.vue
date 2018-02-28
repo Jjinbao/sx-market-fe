@@ -13,7 +13,7 @@
         <div class="old-price"><span>￥</span>65</div>
       </div>
       <div class="product-container-buy">
-        马上抢
+        {{btnname}}
       </div>
       <div class="product-container-progress">
         <div class="progress-bar"></div>
@@ -29,6 +29,7 @@
 
 <script>
   export default {
+    props: ['btnname'],
     data () {
       return {
         title: ''

@@ -23,7 +23,12 @@
         副标题这个是副标题
       </div>
       <div class="detail-desc-price">
-        <span class="rmb-1">￥</span><span class="rmb-price">60</span><span class="old-price"><span class="rmb-2">￥</span><span class="rmb-old">65</span></span>
+        <span v-show="!isrsb">
+          <span class="rmb-1">￥</span><span class="rmb-price">60</span><span class="old-price"><span class="rmb-2">￥</span><span class="rmb-old">65</span></span>
+        </span>
+        <span v-show="isrsb">
+          <span class="rsb-price">200</span><span class="rsb-danwei">荣盛币</span>
+        </span>
         <div class="weight">25kg</div>
         <div class="buy-number">
           <img class="buy-minus" src="../assets/icons/minus@2x.png"/>
@@ -49,6 +54,10 @@
         default: false
       },
       heveflag: {
+        type: Boolean,
+        default: false
+      },
+      isrsb: {
         type: Boolean,
         default: false
       }
@@ -189,6 +198,15 @@
           .buy-plus{
             right: 2px;
           }
+        }
+        .rsb-price{
+          font-size: 23px;
+          color: #ff6b12;
+        }
+        .rsb-danwei{
+          font-size: 11px;
+          color: #5a5a5a;
+          margin-left: 4px;
         }
       }
     }

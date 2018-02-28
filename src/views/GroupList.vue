@@ -2,11 +2,18 @@
   <div class="content">
     <header-bar :title="title"></header-bar>
     <div class="content-body">
-      <product class="content-body-prodect" v-on:toDetail="toDetail"></product>
-      <product class="content-body-prodect" v-on:toDetail="toDetail"></product>
-      <product class="content-body-prodect" v-on:toDetail="toDetail"></product>
-      <product class="content-body-prodect" v-on:toDetail="toDetail"></product>
-      <product class="content-body-prodect" v-on:toDetail="toDetail"></product>
+      <product class="content-body-prodect"
+               v-on:toDetail="toDetail"
+               :isplace="false"></product>
+      <product class="content-body-prodect"
+               v-on:toDetail="toDetail"
+               :isplace="false"></product>
+      <product class="content-body-prodect"
+               v-on:toDetail="toDetail"
+               :isplace="false"></product>
+      <product class="content-body-prodect"
+               v-on:toDetail="toDetail"
+               :isplace="false"></product>
     </div>
   </div>
 </template>

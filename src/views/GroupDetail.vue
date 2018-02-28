@@ -6,7 +6,7 @@
     <div class="content-detail">
       <div class="content-detail-status">
         <div class="info">
-          剩余<span>5</span>天
+          剩余<span>15</span>天
           <div class="have-sold">已售85%</div>
         </div>
         <div class="progress">

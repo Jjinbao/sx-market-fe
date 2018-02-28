@@ -47,7 +47,7 @@
           <div class="stop-name">距结束</div><div class="count-down">02</div><div class="time-point">:</div><div class="count-down">02</div><div class="time-point">:</div><div class="count-down">02</div>
         </div>
         <div class="seckill-product">
-          <product-index v-on:seckillDetail="toSeckillDetail"></product-index>
+          <product-index v-on:seckillDetail="toSeckillDetail" :btnname="btnName.btnQiang"></product-index>
         </div>
       </div>
       <div class="content-body-group">
@@ -60,7 +60,7 @@
           </div>
         </div>
         <div class="group-product">
-          <product-index></product-index>
+          <product-index v-on:seckillDetail="toGroupDetail"  :btnname="btnName.btnPin"></product-index>
         </div>
       </div>
       <div class="content-body-story">
@@ -110,6 +110,10 @@
     data () {
       return {
         title: '商城',
+        btnName: {
+          btnPin: '马上拼',
+          btnQiang: '马上抢'
+        },
         pageIndex: 1,
         bannerList: []
       }
@@ -165,6 +169,13 @@
       toSeckillDetail (id) {
         this.$router.push({
           name: 'seckillDetail',
+          params: {id: id}
+        })
+      },
+      // 去拼团详情
+      toGroupDetail (id) {
+        this.$router.push({
+          name: 'groupDetail',
           params: {id: id}
         })
       }

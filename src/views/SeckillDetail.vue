@@ -5,13 +5,13 @@
     <detail-swiper :bannerlist="bannerList"></detail-swiper>
     <div class="content-detail">
       <div class="content-detail-status">
-        <div class="info">
-          剩余<span>5</span>天
-          <div class="have-sold">已售85%</div>
+        <div class="residue-time">
+          <div class="stop-name">距结束</div><div class="count-down">02</div><div class="time-point">:</div><div class="count-down">02</div><div class="time-point">:</div><div class="count-down">02</div>
         </div>
-        <div class="progress">
-          <div class="progress-bar"></div>
-          <div class="progress-active"></div>
+        <div class="sold-progress">
+          <div class="sold-progress-bar"></div>
+          <div class="sold-progress-active"></div>
+          <span class="sold-number">已售85%</span>
         </div>
       </div>
       <div class="content-detail-introduce">
@@ -120,8 +120,9 @@
     &-detail{
       padding-bottom: 49px;
       &-status{
-        padding: 25px 15px;
+        padding: 22px 0 16px;
         background-color: white;
+        position: relative;
         .info{
           font-size: 12px;
           color: #878787;
@@ -153,6 +154,70 @@
             background-color: #1bb2cd;
             border-radius: 2px;
 
+          }
+        }
+        .residue-time{
+          position: relative;
+          box-sizing: border-box;
+          width: 50%;
+          padding-left: 15px;
+          .stop-name{
+            display: inline-block;
+            height: 21px;
+            line-height: 21px;
+            font-size: 13px;
+            margin-right: 12px;
+          }
+          .time-point{
+            width: 11px;
+            text-align: center;
+            display: inline-block;
+            color: #212121;
+            height: 21px;
+            line-height: 21px;
+          }
+          .count-down{
+            display: inline-block;
+            width: 21px;
+            height: 21px;
+            background-color: #4a4a4a;
+            border-radius: 3px;
+            font-size: 12px;
+            text-align: center;
+            line-height: 21px;
+            color: white;
+          }
+        }
+        .sold-progress{
+          width: 50%;
+          height: 25px;
+          margin-top: 0;
+          position: absolute;
+          top: 22px;
+          right: 0;
+          padding-right: 15px;
+          box-sizing: border-box;
+          .sold-progress-bar{
+            width: calc(100% - 34px);
+            height: 4px;
+            background-color: #e0e0e0;
+            margin-top: 10px;
+            border-radius: 4px;
+          }
+          .sold-progress-active{
+            width:  calc(100% - 50px);
+            height: 4px;
+            border-radius: 4px;
+            background-color: #1bb2cd;
+            position: absolute;
+            top: 10px;
+            left: 0;
+          }
+          .sold-number{
+            float: right;
+            font-size: 12px;
+            color: #2a2a2a;
+            margin-top: -11px;
           }
         }
       }

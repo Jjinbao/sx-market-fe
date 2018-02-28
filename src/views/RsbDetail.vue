@@ -2,7 +2,7 @@
   <div class="content">
     <div class="content-back" @click="back"></div>
     <div class="content-share" @click="share"></div>
-    <detail-swiper :bannerlist="bannerList"></detail-swiper>
+    <detail-swiper :bannerlist="bannerList" :isrsb="true"></detail-swiper>
     <div class="content-detail">
       <div class="content-detail-status">
         <div class="info">
