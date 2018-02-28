@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <keep-alive exclude="Order">
+    <keep-alive exclude="Order,GroupDetail,SeckillDetail">
       <router-view></router-view>
     </keep-alive>
     <tabbar class="vux-demo-tabbar" icon-class="vux-center" v-show="isShowTabbar" slot="bottom" style="position: fixed;left: 0;bottom: 0;background-color: white">

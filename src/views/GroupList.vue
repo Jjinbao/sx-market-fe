@@ -2,11 +2,11 @@
   <div class="content">
     <header-bar :title="title"></header-bar>
     <div class="content-body">
-      <product style="margin-top: 1px;"></product>
-      <product style="margin-top: 1px;"></product>
-      <product style="margin-top: 1px;"></product>
-      <product style="margin-top: 1px;"></product>
-      <product style="margin-top: 1px;"></product>
+      <product class="content-body-prodect" v-on:toDetail="toDetail"></product>
+      <product class="content-body-prodect" v-on:toDetail="toDetail"></product>
+      <product class="content-body-prodect" v-on:toDetail="toDetail"></product>
+      <product class="content-body-prodect" v-on:toDetail="toDetail"></product>
+      <product class="content-body-prodect" v-on:toDetail="toDetail"></product>
     </div>
   </div>
 </template>
@@ -26,6 +26,12 @@
       Product
     },
     methods: {
+      toDetail (val) {
+        this.$router.push({
+          name: 'groupDetail',
+          params: {id: '000000005fec1df5015fec7922ef0001'}
+        })
+      }
     }
   }
 </script>
@@ -35,6 +41,9 @@
     &-body {
       position: relative;
       padding-top: 64px;
+      &-prodect{
+        margin-top: 1px;
+      }
     }
   }
 </style>

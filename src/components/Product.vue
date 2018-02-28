@@ -1,5 +1,5 @@
 <template>
-  <div class="product">
+  <div class="product" @click="toProDetail">
     <div class="product-line"></div>
     <div class="product-container">
       <p align="top" class="product-container-title">
@@ -29,6 +29,9 @@
       }
     },
     methods: {
+      toProDetail () {
+        this.$emit('toDetail', {id: 123})
+      }
     }
   }
 </script>

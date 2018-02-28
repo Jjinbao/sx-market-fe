@@ -16,7 +16,7 @@
           </div>
         </div>
       </div>
-      <div class="content-body-classics">
+      <div class="content-body-classics" @click="toGoodList">
 
       </div>
       <div class="content-body-seckill">
@@ -47,7 +47,7 @@
           <div class="stop-name">距结束</div><div class="count-down">02</div><div class="time-point">:</div><div class="count-down">02</div><div class="time-point">:</div><div class="count-down">02</div>
         </div>
         <div class="seckill-product">
-          <product-index></product-index>
+          <product-index v-on:seckillDetail="toSeckillDetail"></product-index>
         </div>
       </div>
       <div class="content-body-group">
@@ -95,7 +95,7 @@
         </div>
         <div class="nice-content">
           <product></product>
-          <product></product>
+          <product style="margin-top: 1px"></product>
         </div>
       </div>
     </div>
@@ -149,6 +149,10 @@
       toRsbList () {
         this.$router.push({name: 'rsbList'})
       },
+      // 去优选列表
+      toGoodList () {
+        this.$router.push({name: 'goodList'})
+      },
       // 选择一个秒杀时间
       choiceTime () {
         console.log('choick a time')
@@ -156,6 +160,13 @@
       // 更多故事
       moreStory () {
         this.$router.push({name: 'find'})
+      },
+      // 去秒杀详情
+      toSeckillDetail (id) {
+        this.$router.push({
+          name: 'seckillDetail',
+          params: {id: id}
+        })
       }
     }
   }

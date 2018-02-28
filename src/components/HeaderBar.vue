@@ -1,17 +1,18 @@
 <template>
-  <div class="content">
-    <div class="content-title">
+  <div class="header">
+    <div class="header-title">
       {{title}}
     </div>
-    <div class="content-back" @click="back">
+    <div class="header-back" @click="back">
     </div>
+    <div class="header-share" v-show="showShare"></div>
   </div>
 </template>
 
 <script>
   export default {
     name: 'headerBar',
-    props: ['title', 'pageIndex'],
+    props: ['title', 'pageIndex', 'showShare'],
     data () {
       return {
         msg: 'Hello World!'
@@ -30,7 +31,7 @@
 </script>
 
 <style rel="stylesheet/less" lang="less" scoped>
-  .content{
+  .header{
     height: 64px;
     box-sizing: border-box;
     position: fixed;
@@ -64,10 +65,19 @@
     &-back{
       width: 23px;
       height: 44px;
-      background: url("../assets/icons/ly-back-black.3x.png") no-repeat 12px 12px;
+      background: url("../assets/icons/back-arrow@2x.png") no-repeat 12px 12px;
       background-size: 11px 20px;
       padding-left: 12px;
       position: absolute;
+      bottom: 0;
+    }
+    &-share{
+      width: 17px;
+      height: 44px;
+      background: url("../assets/icons/share-title@2x.png") no-repeat left center;
+      background-size: 17px 22px;
+      position: absolute;
+      right: 15px;
       bottom: 0;
     }
   }

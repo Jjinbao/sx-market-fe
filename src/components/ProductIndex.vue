@@ -1,5 +1,5 @@
 <template>
-  <div class="product">
+  <div class="product" @click="toProDetail">
     <div class="product-container">
       <p align="top" class="product-container-title">
         商品小红酒整箱葡萄酒，英国皇家专用葡萄酒500ml*6瓶
@@ -35,6 +35,9 @@
       }
     },
     methods: {
+      toProDetail () {
+        this.$emit('seckillDetail', '000000005fec1df5015fec7922ef0001')
+      }
     }
   }
 </script>
