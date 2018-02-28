@@ -12,6 +12,7 @@ import GroupDetail from '@/views/GroupDetail'
 import GoodProDetail from '@/views/GoodProDetail'
 import RsbDetail from '@/views/RsbDetail'
 import SeckillDetail from '@/views/SeckillDetail'
+import OrderDetail from '@/views/OrderDetail'
 
 Vue.use(Router)
 
@@ -86,6 +87,12 @@ export default new Router({
       name: 'seckillDetail',
       component: SeckillDetail,
       meta: { scrollToTop: true }
+    },
+    // 订单详情
+    {
+      path: '/orderdetail',
+      name: 'orderDetail',
+      component: OrderDetail
     },
     {
       path: '*',

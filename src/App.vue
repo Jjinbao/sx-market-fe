@@ -50,9 +50,9 @@
 
 <style lang="less">
   @import '~vux/src/styles/reset.less';
-
   body {
     background-color: #f6f6f6;
+    overflow: auto;
   }
 
   .vux-demo-tabbar {

@@ -1,6 +1,6 @@
 <template>
   <div class="content">
-    <header-bar :title="title"></header-bar>
+    <header-bar :title="title" :page-index="pageIndex"></header-bar>
     <div class="content-body">
       <div class="content-body-story">
         <div class="story-content">
@@ -42,7 +42,8 @@
     data () {
       return {
         msg: 'Hello World!',
-        title: '发现'
+        title: '发现',
+        pageIndex: 1
       }
     },
     components: {
