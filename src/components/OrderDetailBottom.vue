@@ -2,13 +2,14 @@
   <div class="bottom">
     <div class="bottom-line"></div>
     <div class="bottom-buttons service" @click="openService">
-      客服
+      在线咨询
     </div>
     <div class="bottom-buttons add-cart" @click="addCart">
-      加入购物车
+      <div class="line-left"></div>
+      取消订单
     </div>
     <div class="bottom-buttons buy-now" @click="buyNow">
-      立即购买
+      去支付
     </div>
   </div>
 </template>
@@ -32,14 +33,14 @@
 </script>
 
 <style rel="stylesheet/less" lang="less" scoped>
-  @import '../styles/themes';
+  @import "../styles/themes";
   .bottom{
     position: fixed;
     bottom: 0;
     left:0;
     height: 49px;
     width: 100%;
-    background-color: white;
+    background-color: @common-colour-ff;
     font-size: 0;
     &-line{
       position: relative;
@@ -64,18 +65,28 @@
       padding-top: 30px;
     }
     .buy-now{
-      background-color: @common-collor-orange;
+      background-color: @common-active-color;
       color: @common-colour-ff;
       height: 49px;
       line-height: 49px;
       width: 36%;
     }
     .add-cart{
-      color: @common-colour-ff;
-      background-color: #ffb03e;
+      color: #5a5a5a;
       height: 49px;
       line-height: 49px;
       width: 39%;
+      position: relative;
+      .line-left{
+        height: 49px;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      .line-left:after{
+        .common-line-style;
+        border-left: 1px solid @common-collor-d2;
+      }
     }
   }
 </style>

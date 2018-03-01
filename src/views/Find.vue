@@ -61,6 +61,7 @@
 </script>
 
 <style rel="stylesheet/less" lang="less" scoped>
+  @import "../styles/themes";
   .content{
     padding-bottom: 53px;
     &-body{
@@ -114,7 +115,7 @@
             padding-bottom: 2px;
           }
           .rec-pro{
-            color: #1bb2cd;
+            color: @common-active-color;
             font-size: 12px;
             height: 49px;
             line-height: 49px;
@@ -125,7 +126,7 @@
               left: 0;
               width: 4px;
               height: 4px;
-              background-color: #1bb2cd;
+              background-color: @common-active-color;
               border-radius: 4px;
               margin-top: 23px;
             }

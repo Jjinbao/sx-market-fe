@@ -36,6 +36,7 @@
 </script>
 
 <style rel="stylesheet/less" lang="less" scoped>
+  @import "../styles/themes";
   .header{
     /*height: 64px;*/
     box-sizing: border-box;
@@ -44,7 +45,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: white;
+    background-color: @common-colour-ff;
     &-content{
       position: relative;
       &-title{
@@ -59,15 +60,8 @@
         text-align: center;
       }
       &-title:after{
-        width: 200%;
-        height: 200%;
-        position: absolute;
-        top: -50%;
-        left: -50%;
-        content: "";
-        border-bottom: 1px solid #d2d2d2;
-        -webkit-transform: scale(0.5);
-        transform: scale(0.5);
+        .common-line-style;
+        border-bottom: 1px solid @common-collor-d2;
       }
       &-back{
         width: 23px;
@@ -103,7 +97,7 @@
         right: 15px;
         bottom: 0;
         font-size: 15px;
-        color: #1bb2cd;
+        color: @common-active-color;
       }
     }
 

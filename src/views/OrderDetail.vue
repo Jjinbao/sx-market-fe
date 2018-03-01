@@ -41,11 +41,20 @@
           仓库出库
         </div>
       </div>
+      <div class="content-body-rec">
+        <product-rec style="margin-top: 1px;"></product-rec>
+        <product-rec style="margin-top: 1px;"></product-rec>
+        <product-rec style="margin-top: 1px;"></product-rec>
+        <product-rec style="margin-top: 1px;"></product-rec>
+      </div>
     </div>
+    <order-detail-bottom></order-detail-bottom>
   </div>
 </template>
 <script>
   import HeaderBar from '../components/HeaderBar.vue'
+  import ProductRec from '../components/ProductRec.vue'
+  import OrderDetailBottom from '../components/OrderDetailBottom.vue'
   export default {
     data () {
       return {
@@ -53,14 +62,18 @@
       }
     },
     components: {
-      HeaderBar
+      HeaderBar,
+      ProductRec,
+      OrderDetailBottom
     },
     methods: {
     }
   }
 </script>
 <style rel="stylesheet/less" lang="less" scoped>
+  @import "../styles/themes";
   .content{
+    padding-bottom: 49px;
     &-body{
       margin-top: 64px;
       &-title{
@@ -74,7 +87,7 @@
         &-status{
           float: right;
           font-size: 15px;
-          color: #1bb2cd;
+          color: @common-active-color;
         }
       }
       &-info{
@@ -101,7 +114,6 @@
             }
             .money{
               font-size: 15px;
-              font-weight: bold;
             }
           }
         }
@@ -146,6 +158,32 @@
           line-height: 1;
           margin-top: 15px;
         }
+      }
+      &-rec{
+        margin-top: 10px;
+        background-color: white;
+      }
+    }
+    &-footer{
+      height: 49px;
+      background-color: white;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      &-line{
+        position: relative;
+      }
+      &-line:after{
+        width: 200%;
+        height: 200%;
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        content: "";
+        border-top: 1px solid #e0e0e0;
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
       }
     }
   }

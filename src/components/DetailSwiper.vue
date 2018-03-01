@@ -95,9 +95,10 @@
   }
 </script>
 <style rel="stylesheet/less" lang="less" scoped>
+  @import "../styles/themes";
   .detail{
     position: relative;
-    background-color: white;
+    background-color: @common-colour-ff;
     &-swiper{
       position: relative;
       &-index{
@@ -108,7 +109,7 @@
         right: 0;
         bottom: 0;
         font-size: 12px;
-        color: #ffffff;
+        color: @common-colour-ff;
         line-height: 20px;
         text-align: center;
       }
@@ -134,7 +135,7 @@
       }
       &-subtitle{
         font-size: 12px;
-        color: #878787;
+        color: @common-colour-87;
         line-height: 1;
         padding-top: 5px;
         padding-left: 15px;
@@ -147,15 +148,15 @@
         position: relative;
         .rmb-1{
           font-size: 15px;
-          color: #ff6b12;
+          color: @common-collor-orange;
         }
         .rmb-price{
           font-size: 23px;
-          color: #ff6b12;
+          color: @common-collor-orange;
         }
         .old-price{
           text-decoration:line-through;
-          color: #b1b1b1;
+          color: @common-colour-b1;
           margin-left: 4px;
           .rmb-2{
             font-size: 11px;
@@ -201,11 +202,11 @@
         }
         .rsb-price{
           font-size: 23px;
-          color: #ff6b12;
+          color: @common-collor-orange;
         }
         .rsb-danwei{
           font-size: 11px;
-          color: #5a5a5a;
+          color: @common-colour-5a;
           margin-left: 4px;
         }
       }

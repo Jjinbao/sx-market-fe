@@ -44,8 +44,9 @@
   }
 </script>
 <style rel="stylesheet/less" lang="less" scoped>
+  @import "../styles/themes";
   .order{
-    background-color: white;
+    background-color: @common-colour-ff;
     margin-bottom: 15px;
     &-title{
       height: 40px;
@@ -57,19 +58,12 @@
       &-status{
         float: right;
         font-size: 15px;
-        color: #1bb2cd;
+        color: @common-active-color;
       }
     }
     &-title:after{
-      width: 200%;
-      height: 200%;
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      content: "";
-      border-bottom: 1px solid #e0e0e0;
-      -webkit-transform: scale(0.5);
-      transform: scale(0.5);
+      .common-line-style;
+      border-bottom: 1px solid @common-colour-e0;
     }
     &-body{
       padding: 14px 12px 16px;
@@ -82,26 +76,19 @@
       &-time{
         line-height: 1;
         font-size: 12px;
-        color: #5a5a5a;
+        color: @common-colour-5a;
         margin-top: 15px;
       }
       &-number{
         line-height: 1;
         font-size: 12px;
-        color: #5a5a5a;
+        color: @common-colour-5a;
         margin-top: 12px;
       }
     }
     &-body:after{
-      width: 200%;
-      height: 200%;
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      content: "";
-      border-bottom: 1px solid #e0e0e0;
-      -webkit-transform: scale(0.5);
-      transform: scale(0.5);
+      .common-line-style;
+      border-bottom: 1px solid @common-colour-e0;
     }
     &-footer{
       height: 45px;

@@ -94,6 +94,7 @@
 </script>
 
 <style rel="stylesheet/less" lang="less" scoped>
+  @import '../styles/themes';
   .content{
     position: relative;
     &-back{

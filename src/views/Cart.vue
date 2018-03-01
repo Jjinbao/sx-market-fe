@@ -40,7 +40,7 @@
         <div class="content-body-footer-line"></div>
         <div class="select-all select-all-active">全选</div>
         <div class="total-money">合计:<span class="money-flag">￥</span><span class="total-number">289</span></div>
-        <div class="calculate-btn">结算</div>
+        <div class="calculate-btn" @click="toCash">结算</div>
       </div>
     </div>
 
@@ -72,12 +72,18 @@
       },
       choiceRsb () {
         this.tabName = 'rsb'
+      },
+      toCash () {
+        this.$router.push({
+          name: 'orderPage'
+        })
       }
     }
   }
 </script>
 
 <style rel="stylesheet/less" lang="less" scoped>
+  @import "../styles/themes";
   .content{
     padding-bottom: 97px;
     &-body{
@@ -90,7 +96,7 @@
         box-sizing: border-box;
         margin: 0 auto;
         border-radius: 5px;
-        border: 1px solid #1bb2cd;
+        border: 1px solid @common-active-color;
         font-size: 0;
         &-one{
           width: 100px;
@@ -101,7 +107,7 @@
           text-align: center;
           border-bottom-left-radius: 4px;
           border-top-left-radius: 4px;
-          color: #1bb2cd;
+          color: @common-active-color;
         }
         &-two{
           width: 100px;
@@ -112,10 +118,10 @@
           text-align: center;
           border-bottom-right-radius: 4px;
           border-top-right-radius: 4px;
-          color: #1bb2cd;
+          color: @common-active-color;
         }
         &-active{
-          background-color: #1bb2cd;
+          background-color: @common-active-color;
           color: white;
         }
       }
@@ -174,21 +180,14 @@
           position: relative;
         }
         &-line:after{
-          width: 200%;
-          height: 200%;
-          position: absolute;
-          top: -50%;
-          left: -50%;
-          content: "";
-          border-top: 1px solid #d2d2d2;
-          -webkit-transform: scale(0.5);
-          transform: scale(0.5);
+          .common-line-style;
+          border-top: 1px solid @common-collor-d2;
         }
         .calculate-btn{
           width: 86px;
           height: 45px;
           line-height: 45px;
-          background-color: #ff6b13;
+          background-color: @common-collor-orange;
           color: white;
           text-align: center;
           font-size: 16px;
@@ -202,12 +201,12 @@
           line-height: 45px;
           .money-flag{
             font-size: 15px;
-            color: #ff6b12;
+            color: @common-collor-orange;
             margin-left: 10px;
           }
           .total-number{
             font-size: 22px;
-            color: #ff6b12;
+            color: @common-collor-orange;
             font-weight: bold;
           }
         }

@@ -36,6 +36,7 @@
 </script>
 
 <style rel="stylesheet/less" lang="less" scoped>
+  @import '../styles/themes';
   .rsb-product{
     background-color: white;
     &-list{
@@ -70,7 +71,7 @@
             color: #5a5a5a;
             span{
               font-size: 18px;
-              color: #ff6b12;
+              color: @common-collor-orange;
               margin-right: 3px;
               line-height: 1;
             }

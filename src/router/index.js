@@ -13,6 +13,7 @@ import GoodProDetail from '@/views/GoodProDetail'
 import RsbDetail from '@/views/RsbDetail'
 import SeckillDetail from '@/views/SeckillDetail'
 import OrderDetail from '@/views/OrderDetail'
+import OrderPage from '@/views/OrderPage'
 
 Vue.use(Router)
 
@@ -93,6 +94,12 @@ export default new Router({
       path: '/orderdetail',
       name: 'orderDetail',
       component: OrderDetail
+    },
+    // 下单界面
+    {
+      path: '/orderpage',
+      name: 'orderPage',
+      component: OrderPage
     },
     {
       path: '*',
