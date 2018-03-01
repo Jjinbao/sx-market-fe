@@ -53,6 +53,14 @@
   html,body{
 
   }
+  .vux-popup-header-right{
+    font-size: 14px;
+    color: #1bb2cd !important;
+  }
+  .vux-popup-header-left{
+    font-size: 14px;
+    color: #5a5a5a !important;
+  }
   body {
     background-color: #f6f6f6;
   }

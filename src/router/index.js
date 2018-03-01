@@ -14,6 +14,9 @@ import RsbDetail from '@/views/RsbDetail'
 import SeckillDetail from '@/views/SeckillDetail'
 import OrderDetail from '@/views/OrderDetail'
 import OrderPage from '@/views/OrderPage'
+import Address from '@/views/Address'
+import NewAddress from '@/views/NewAddress'
+import EditAddress from '@/views/EditAddress'
 
 Vue.use(Router)
 
@@ -100,6 +103,23 @@ export default new Router({
       path: '/orderpage',
       name: 'orderPage',
       component: OrderPage
+    },
+    // 收货地址列表
+    {
+      path: '/address',
+      name: 'Address',
+      component: Address
+    },
+    {
+      path: '/newaddress',
+      name: 'newAddress',
+      component: NewAddress
+    },
+    // 编辑收货地址
+    {
+      path: '/editaddress',
+      name: 'editAddress',
+      component: EditAddress
     },
     {
       path: '*',
